@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FitnessCenter
 {
-    internal class Club
+    public class Club
     {
+        public Club() { }
     }
 }
