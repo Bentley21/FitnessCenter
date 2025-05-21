@@ -14,7 +14,15 @@ namespace FitnessCenter
 
         public override bool CheckIn(Club club)
         {
+
             return false;
         }
+
+        public static int MemberPoints()
+        {
+            return 5;
+        }
     }
+
+    
 }
