@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace FitnessCenter
 {
-    internal class MultiClubMember
+    internal class MultiClubMember : Member
     {
+        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
+        {
+        }
+
+        public override bool CheckIn(Club club)
+        {
+            return false;
+        }
     }
 }
