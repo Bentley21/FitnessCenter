@@ -13,20 +13,23 @@ namespace FitnessCenter
         private string _memberPhone;
         private string _memberEmail;
         private string _memberAddress;
+        private string _memberClub;
 
         public int MemberId { get { return _memberId; } set { _memberId = value; } }
         public string MemberName { get { return _memberName; } set { _memberName = value; } }
         public string MemberPhone { get { return _memberPhone; } set { _memberPhone = value; } }
         public string MemberEmail { get { return _memberEmail; } set { _memberEmail = value; } }
         public string MemberAddress { get { return _memberAddress; } set { _memberAddress = value; } }
+        public string MemberClub { get { return _memberClub;  } set { _memberClub = value; } }
 
-        public Member(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress)
+        public Member(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub)
         {
             MemberId = memberId;
             MemberName = memberName;
             MemberPhone = memberPhone;
             MemberEmail = memberEmail;
             MemberAddress = memberAddress;
+            MemberClub = memberClub;
         }
 
         public abstract bool CheckIn(Club club);
