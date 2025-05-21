@@ -8,7 +8,19 @@ namespace FitnessCenter
 {
     public class Club
     {
-        public Club() { }
+        public List<Club> Clubs;
+
+        public Club()
+        {
+            Clubs = new List<Club>
+            {
+                new Club(),
+                new Club(),
+                new Club()
+            };
+        }
+
+        
 
 
         public void RemoveMember()
