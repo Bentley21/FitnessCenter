@@ -108,7 +108,7 @@ namespace FitnessCenter
 
         public void RemoveMember(int memberId)
         {
-            Console.WriteLine("What type of member are you removing? Single or Multi?")
+            Console.WriteLine("What type of member are you removing? Single or Multi?");
             Console.WriteLine("What is the member # you would like to cancel?");
             memberId = int.Parse(Console.ReadLine());
 
