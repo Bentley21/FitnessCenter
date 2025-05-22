@@ -1,10 +1,18 @@
-﻿namespace FitnessCenter
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace FitnessCenter
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+           
+            Club club = new Club();
+
+            club.AddMember();
+
+            club.DisplayMember();
+            
         }
     }
 }
