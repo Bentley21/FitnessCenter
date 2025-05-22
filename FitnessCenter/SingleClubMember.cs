@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace FitnessCenter
 {
-    internal class SingleClubMember : Member
+    public class SingleClubMember : Member
     {
         bool checkIn = false;
         public SingleClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub)
         {
         }
 
-        public List<SingleClubMember> singleClubMembers;
+        
 
         public override bool CheckIn(Club club)
         {
