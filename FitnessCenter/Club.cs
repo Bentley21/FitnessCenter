@@ -28,21 +28,9 @@ namespace FitnessCenter
             ClubPhone = clubPhone;
         }
 
-        public List<Club> Clubs = new List<Club>();
-        public List<MultiClubMember> MultiClubMembers = new();
-        public List<SingleClubMember> SingleClubMembers = new();
-
-        public Club(List<SingleClubMember> singleClubMembers)
-        {
-            SingleClubMembers = singleClubMembers;
-        }
-
-        public Club(List<MultiClubMember> clubMembers)
-        {
-            MultiClubMembers = clubMembers;
-        }
-
-
+        List<Club> Clubs = new List<Club>();
+        List<MultiClubMember> MultiClubMembers = new();
+        List<SingleClubMember> SingleClubMembers = new();
 
         public Club()
         {
@@ -57,7 +45,10 @@ namespace FitnessCenter
             
         }
 
-        
+        public void run()
+        {
+
+        }
 
         public void AddMember()
         {
@@ -126,6 +117,7 @@ namespace FitnessCenter
             return 0;
         }
 
+        
         
     }
 }
