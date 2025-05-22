@@ -33,7 +33,12 @@ namespace FitnessCenter
         }
 
         public abstract bool CheckIn(Club club);
-       
+
+        public override string ToString()
+        {
+            return $"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress} {MemberClub}";
+        }
+
 
     }
 }

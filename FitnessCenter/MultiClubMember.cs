@@ -8,10 +8,11 @@ namespace FitnessCenter
 {
     internal class MultiClubMember : Member
     {
-        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
+        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub)
         {
         }
 
+        public List<MultiClubMember> multiClubMembers;
         public override bool CheckIn(Club club)
         {
 
