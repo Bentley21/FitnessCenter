@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace FitnessCenter
 {
-    internal class MultiClubMember : Member
+    public class MultiClubMember : Member
     {
+        bool checkIn;
         public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub)
         {
         }
 
-        public List<MultiClubMember> multiClubMembers;
+        
         public override bool CheckIn(Club club)
         {
 
-            return false;
+            if (checkIn == true)
+            {
+                Console.WriteLine($"{MemberName} has been checked in.");
+            }
+            if (checkIn == false)
+            {
+                Console.WriteLine($"{MemberName} has been checked out.");
+            }
+            return checkIn;
         }
 
         public static int MemberPoints()
