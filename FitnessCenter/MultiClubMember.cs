@@ -12,6 +12,7 @@ namespace FitnessCenter
         {
         }
 
+        public List<MultiClubMember> multiClubMembers;
         public override bool CheckIn(Club club)
         {
 
