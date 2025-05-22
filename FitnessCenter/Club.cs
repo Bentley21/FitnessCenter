@@ -27,8 +27,21 @@ namespace FitnessCenter
         }
 
         public List<Club> Clubs = new List<Club>();
-        public List<Member> ClubMembers = new();
-        
+        public List<MultiClubMember> MultiClubMembers = new();
+        public List<SingleClubMember> SingleClubMembers = new();
+
+        public Club(List<SingleClubMember> singleClubMembers)
+        {
+            SingleClubMembers = singleClubMembers;
+        }
+
+        public Club(List<MultiClubMember> clubMembers)
+        {
+            MultiClubMembers = clubMembers;
+        }
+
+
+
         public Club()
         {
             
@@ -42,34 +55,53 @@ namespace FitnessCenter
             
         }
 
-        public Club(string club)
-        {
-            ClubName = club;
-            ClubMembers = new List<Member>();
-
-        }
+        
 
         public void AddMember()
         {
-            Console.WriteLine("What is the new members member id?");
-            int memberId = int.Parse(Console.ReadLine());
-            Console.WriteLine("What is the new members name?");
-            string memberName = Console.ReadLine().Trim();
-            Console.WriteLine($"What is {memberName}'s phone number?");
-            string memberPhone = Console.ReadLine().Trim();
-            Console.WriteLine($"What is {memberName}'s email?");
-            string memberEmail = Console.ReadLine().Trim();
-            Console.WriteLine($"What is {memberName}'s Address?");
-            string memberAddress = Console.ReadLine().Trim();
-            Console.WriteLine($"What is {memberName}'s Club?");
-            string memberClub = Console.ReadLine().Trim();
-            ClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
+            Console.WriteLine("Is the member a Single or Multi Member?");
+            string memberType = Console.ReadLine();
+            if (memberType == "single")
+            {
+                Console.WriteLine("What is the new members member id?");
+                int memberId = int.Parse(Console.ReadLine());
+                Console.WriteLine("What is the new members name?");
+                string memberName = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s phone number?");
+                string memberPhone = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s email?");
+                string memberEmail = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s Address?");
+                string memberAddress = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s Club?");
+                string memberClub = Console.ReadLine().Trim();
+                SingleClubMembers.Add(new SingleClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
+            }
+            else if (memberType == "multi")
+            {
+                Console.WriteLine("What is the new members member id?");
+                int memberId = int.Parse(Console.ReadLine());
+                Console.WriteLine("What is the new members name?");
+                string memberName = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s phone number?");
+                string memberPhone = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s email?");
+                string memberEmail = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s Address?");
+                string memberAddress = Console.ReadLine().Trim();
+                Console.WriteLine($"What is {memberName}'s Club?");
+                string memberClub = Console.ReadLine().Trim();
+                MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
+            }
+
         }
 
 
-        public void RemoveMember()
+        public void RemoveMember(int memberId)
         {
-
+            Console.WriteLine("What is the member # you would like to cancel?");
+            memberId = int.Parse(Console.ReadLine());
+            
         }
 
         public void DisplayMember()
