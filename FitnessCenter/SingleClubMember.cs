@@ -14,7 +14,8 @@ namespace FitnessCenter
 
         public override bool CheckIn(Club club)
         {
-            return false;
+            bool checkIn = false;
+            return checkIn = !checkIn;
         }
     }
 }
