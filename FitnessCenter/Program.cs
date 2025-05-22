@@ -6,12 +6,13 @@ namespace FitnessCenter
     {
         static void Main(string[] args)
         {
-           
-            Club club = new Club();
 
-            club.AddMember();
+            
+            
 
-            club.DisplayMember();
+            
+
+        
             
         }
     }

@@ -13,6 +13,7 @@ namespace FitnessCenter
         private string _clubName;
         private string _clubAddress;
         private string _clubPhone;
+       
 
         public int ClubId { get { return _clubId;  } set { _clubId = value; } }
         public string ClubName { get { return _clubName; } set { _clubName = value; } }
@@ -53,8 +54,7 @@ namespace FitnessCenter
             Clubs.Add(detroit);
             Club livonia = new Club(03, "Livonia", "98765 Northeast Street Livonia, MI 33333", "234-567-8901");
             Clubs.Add(livonia);
-            Club netherlands = new Club(04, "Netherlands", "58976 Isle of Green, EU 31865", "31-080-9076");
-            Clubs.Add(netherlands);
+            
         }
 
         
@@ -94,9 +94,8 @@ namespace FitnessCenter
                     string memberEmail = Console.ReadLine().Trim();
                     Console.WriteLine($"What is {memberName}'s Address?");
                     string memberAddress = Console.ReadLine().Trim();
-                    Console.WriteLine($"What is {memberName}'s Club?");
-                    string memberClub = Console.ReadLine().Trim();
-                    MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
+                    
+                    MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberPoints));
                 }
                 else
                 {
@@ -109,7 +108,7 @@ namespace FitnessCenter
 
         public void RemoveMember(int memberId)
         {
-            Console.WriteLine("What type of member are you removing? Single or Multi?");
+            Console.WriteLine("What type of member are you removing? Single or Multi?")
             Console.WriteLine("What is the member # you would like to cancel?");
             memberId = int.Parse(Console.ReadLine());
 

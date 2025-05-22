@@ -9,7 +9,7 @@ namespace FitnessCenter
     public class SingleClubMember : Member
     {
         bool checkIn = false;
-        public SingleClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub)
+        public SingleClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
         {
         }
 
