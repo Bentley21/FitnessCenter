@@ -53,7 +53,8 @@ namespace FitnessCenter
             Clubs.Add(detroit);
             Club livonia = new Club(03, "Livonia", "98765 Northeast Street Livonia, MI 33333", "234-567-8901");
             Clubs.Add(livonia);
-            
+            Club netherlands = new Club(04, "Netherlands", "58976 Isle of Green, EU 31865", "31-080-9076");
+            Clubs.Add(netherlands);
         }
 
         
@@ -108,7 +109,7 @@ namespace FitnessCenter
 
         public void RemoveMember(int memberId)
         {
-            Console.WriteLine("What type of member are you removing? Single or Multi?")
+            Console.WriteLine("What type of member are you removing? Single or Multi?");
             Console.WriteLine("What is the member # you would like to cancel?");
             memberId = int.Parse(Console.ReadLine());
 
