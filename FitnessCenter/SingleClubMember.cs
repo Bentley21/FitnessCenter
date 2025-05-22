@@ -13,6 +13,8 @@ namespace FitnessCenter
         {
         }
 
+        public List<SingleClubMember> singleClubMembers;
+
         public override bool CheckIn(Club club)
         {
             checkIn = !checkIn;
