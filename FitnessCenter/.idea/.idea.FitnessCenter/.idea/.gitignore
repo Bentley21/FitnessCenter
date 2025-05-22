@@ -3,9 +3,15 @@
 /workspace.xml
 # Rider ignored files
 /projectSettingsUpdater.xml
+<<<<<<< HEAD
 /modules.xml
 /contentModel.xml
 /.idea.FitnessCenter.iml
+=======
+/contentModel.xml
+/.idea.FitnessCenter.iml
+/modules.xml
+>>>>>>> b80bc8d0f19c9e1a00f79b827c6186ac8d554c56
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
