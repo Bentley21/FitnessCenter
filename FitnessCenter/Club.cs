@@ -94,6 +94,7 @@ namespace FitnessCenter
                     string memberEmail = Console.ReadLine().Trim();
                     Console.WriteLine($"What is {memberName}'s Address?");
                     string memberAddress = Console.ReadLine().Trim();
+                    int memberPoints = 0;
                     
                     MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberPoints));
                 }
@@ -108,7 +109,7 @@ namespace FitnessCenter
 
         public void RemoveMember(int memberId)
         {
-            Console.WriteLine("What type of member are you removing? Single or Multi?")
+            Console.WriteLine("What type of member are you removing? Single or Multi?");
             Console.WriteLine("What is the member # you would like to cancel?");
             memberId = int.Parse(Console.ReadLine());
 
