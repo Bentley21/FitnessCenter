@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-﻿namespace FitnessCenter
-=======
-﻿
-namespace FitnessCenter
->>>>>>> 81b32c709a0a6a7264c54cc44217e249397da0fb
+namespace Fitness_Center;
+
+public class Club
 {
-    public class Club
-    {
-        private int _clubId;
-        private string _clubName;
-        private string _clubAddress;
-        private string _clubPhone;
+    private int _clubId;
+    private string _clubName;
+    private string _clubAddress;
+    private string _clubPhone;
        
 
-        public int ClubId { get { return _clubId;  } set { _clubId = value; } }
-        public string ClubName { get { return _clubName; } set { _clubName = value; } }
-        public string ClubAddress { get { return _clubAddress; } set { _clubAddress = value; } }
-        public string ClubPhone { get { return _clubPhone; } set { _clubPhone = value; } }
+    public int ClubId { get { return _clubId;  } set { _clubId = value; } }
+    public string ClubName { get { return _clubName; } set { _clubName = value; } }
+    public string ClubAddress { get { return _clubAddress; } set { _clubAddress = value; } }
+    public string ClubPhone { get { return _clubPhone; } set { _clubPhone = value; } }
 
-        public Club(int clubId, string clubName,  string clubAddress, string clubPhone)
+    public Club(int clubId, string clubName,  string clubAddress, string clubPhone)
         {
             ClubId = clubId;
             ClubName = clubName;
@@ -115,8 +110,5 @@ namespace FitnessCenter
         {
             return 0;
         }
-
-        
-        
-    }
+    
 }
