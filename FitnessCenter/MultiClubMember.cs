@@ -8,9 +8,15 @@ namespace FitnessCenter
 {
     public class MultiClubMember : Member
     {
+
+        private int _memberPoints;
+
+        public int MemberPoints {  get { return _memberPoints; } set { _memberPoints = value; } }
         bool checkIn;
-        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub)
+
+        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, int memberPoints) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
         {
+            MemberPoints = memberPoints;
         }
 
         
@@ -28,9 +34,11 @@ namespace FitnessCenter
             return checkIn;
         }
 
-        public static int MemberPoints()
+        public static int MembershipPoints(int memberPoints)
         {
-            return 5;
+            
+            memberPoints += 25;
+            return memberPoints;
         }
     }
 

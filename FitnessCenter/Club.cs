@@ -13,6 +13,7 @@ namespace FitnessCenter
         private string _clubName;
         private string _clubAddress;
         private string _clubPhone;
+       
 
         public int ClubId { get { return _clubId;  } set { _clubId = value; } }
         public string ClubName { get { return _clubName; } set { _clubName = value; } }
@@ -27,21 +28,9 @@ namespace FitnessCenter
             ClubPhone = clubPhone;
         }
 
-        public List<Club> Clubs = new List<Club>();
-        public List<MultiClubMember> MultiClubMembers = new();
-        public List<SingleClubMember> SingleClubMembers = new();
-
-        public Club(List<SingleClubMember> singleClubMembers)
-        {
-            SingleClubMembers = singleClubMembers;
-        }
-
-        public Club(List<MultiClubMember> clubMembers)
-        {
-            MultiClubMembers = clubMembers;
-        }
-
-
+        List<Club> Clubs = new List<Club>();
+        List<MultiClubMember> MultiClubMembers = new();
+        List<SingleClubMember> SingleClubMembers = new();
 
         public Club()
         {
@@ -53,11 +42,13 @@ namespace FitnessCenter
             Clubs.Add(detroit);
             Club livonia = new Club(03, "Livonia", "98765 Northeast Street Livonia, MI 33333", "234-567-8901");
             Clubs.Add(livonia);
-            Club netherlands = new Club(04, "Netherlands", "58976 Isle of Green, EU 31865", "31-080-9076");
-            Clubs.Add(netherlands);
+            
         }
 
-        
+        public void run()
+        {
+
+        }
 
         public void AddMember()
         {
@@ -94,9 +85,9 @@ namespace FitnessCenter
                     string memberEmail = Console.ReadLine().Trim();
                     Console.WriteLine($"What is {memberName}'s Address?");
                     string memberAddress = Console.ReadLine().Trim();
-                    Console.WriteLine($"What is {memberName}'s Club?");
-                    string memberClub = Console.ReadLine().Trim();
-                    MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
+                    int memberPoints = 0;
+                    
+                    MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberPoints));
                 }
                 else
                 {
@@ -126,6 +117,7 @@ namespace FitnessCenter
             return 0;
         }
 
+        
         
     }
 }

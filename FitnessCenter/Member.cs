@@ -22,21 +22,21 @@ namespace FitnessCenter
         public string MemberAddress { get { return _memberAddress; } set { _memberAddress = value; } }
         public string MemberClub { get { return _memberClub;  } set { _memberClub = value; } }
 
-        public Member(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub)
+        public Member(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress)
         {
             MemberId = memberId;
             MemberName = memberName;
             MemberPhone = memberPhone;
             MemberEmail = memberEmail;
             MemberAddress = memberAddress;
-            MemberClub = memberClub;
+            //MemberClub = memberClub;
         }
 
         public abstract bool CheckIn(Club club);
 
         public override string ToString()
         {
-            return $"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress} {MemberClub}";
+            return $"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress}";
         }
 
 
