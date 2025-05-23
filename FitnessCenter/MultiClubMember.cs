@@ -34,9 +34,9 @@ namespace FitnessCenter
             return checkIn;
         }
 
-        public static int MembershipPoints(/*int memberPoints*/)
+        public static int MembershipPoints(int memberPoints)
         {
-            int memberPoints;
+            
             memberPoints += 25;
             return memberPoints;
         }
