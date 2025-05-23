@@ -1,7 +1,13 @@
 <<<<<<< HEAD
-﻿namespace FitnessCenter
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 =======
 ﻿
+>>>>>>> 81b32c709a0a6a7264c54cc44217e249397da0fb
 namespace FitnessCenter
 >>>>>>> 81b32c709a0a6a7264c54cc44217e249397da0fb
 {
@@ -11,14 +17,14 @@ namespace FitnessCenter
         private string _clubName;
         private string _clubAddress;
         private string _clubPhone;
-       
 
-        public int ClubId { get { return _clubId;  } set { _clubId = value; } }
+
+        public int ClubId { get { return _clubId; } set { _clubId = value; } }
         public string ClubName { get { return _clubName; } set { _clubName = value; } }
         public string ClubAddress { get { return _clubAddress; } set { _clubAddress = value; } }
         public string ClubPhone { get { return _clubPhone; } set { _clubPhone = value; } }
 
-        public Club(int clubId, string clubName,  string clubAddress, string clubPhone)
+        public Club(int clubId, string clubName, string clubAddress, string clubPhone)
         {
             ClubId = clubId;
             ClubName = clubName;
@@ -32,7 +38,7 @@ namespace FitnessCenter
 
         public Club()
         {
-            
+
 
             Club chicago = new Club(01, "Chicago", "12345 Main Street Chicago, IL 55555", "555-555-5555");
             Clubs.Add(chicago);
@@ -85,7 +91,7 @@ namespace FitnessCenter
                     Console.WriteLine($"What is {memberName}'s Address?");
                     string memberAddress = Console.ReadLine().Trim();
                     int memberPoints = 0;
-                    
+
                     MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberPoints));
                 }
                 else
@@ -103,20 +109,20 @@ namespace FitnessCenter
             Console.WriteLine("What is the member # you would like to cancel?");
             memberId = int.Parse(Console.ReadLine());
 
-            
+
         }
 
         public void DisplayMember()
         {
-            
+
         }
-       
+
         public int CheckMemberPoints()
         {
             return 0;
         }
 
-        
-        
+
+
     }
 }
