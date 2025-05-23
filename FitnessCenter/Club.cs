@@ -42,7 +42,8 @@ namespace FitnessCenter
             Clubs.Add(detroit);
             Club livonia = new Club(03, "Livonia", "98765 Northeast Street Livonia, MI 33333", "234-567-8901");
             Clubs.Add(livonia);
-            
+            Club netherlands = new Club(04, "Netherlands", "932 Isle of Green, EU 31", "31-907-3596");
+            Clubs.Add(netherlands);
         }
 
         public void run()
