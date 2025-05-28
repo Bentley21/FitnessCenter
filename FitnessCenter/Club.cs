@@ -35,8 +35,6 @@ namespace FitnessCenter
 
         public Club()
         {
-
-
             Club chicago = new Club(01, "Chicago", "12345 Main Street Chicago, IL 55555", "555-555-5555");
             Clubs.Add(chicago);
             Club detroit = new Club(02, "Detroit", "23456 Woodward Ave Detroit, MI 44444", "123-456-7890");
