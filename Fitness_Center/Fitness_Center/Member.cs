@@ -33,5 +33,10 @@ public abstract class Member
         return $"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress}";
     }
 
+    public void DisplayMember()
+    {
+        Console.WriteLine($"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress}");
+    }
+
 
 }
