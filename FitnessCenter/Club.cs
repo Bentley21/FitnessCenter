@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 namespace FitnessCenter
->>>>>>> 81b32c709a0a6a7264c54cc44217e249397da0fb
+
 {
     public class Club
     {
