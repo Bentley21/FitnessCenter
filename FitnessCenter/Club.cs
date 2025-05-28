@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-=======
-﻿
->>>>>>> 81b32c709a0a6a7264c54cc44217e249397da0fb
+
 namespace FitnessCenter
+>>>>>>> 81b32c709a0a6a7264c54cc44217e249397da0fb
 {
     public class Club
     {
@@ -49,7 +47,7 @@ namespace FitnessCenter
             Clubs.Add(netherlands);
         }
 
-        public void run()
+        public void Run()
         {
 
         }
@@ -116,10 +114,7 @@ namespace FitnessCenter
 
         }
 
-        public int CheckMemberPoints()
-        {
-            return 0;
-        }
+       
 
 
 
