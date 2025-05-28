@@ -1,5 +1,6 @@
 namespace FitnessCenter
 
+
 {
     public class Club
     {
@@ -40,7 +41,7 @@ namespace FitnessCenter
             Clubs.Add(netherlands);
         }
 
-        public void run()
+        public void Run()
         {
 
         }
@@ -107,10 +108,7 @@ namespace FitnessCenter
 
         }
 
-        public int CheckMemberPoints()
-        {
-            return 0;
-        }
+       
 
 
 
