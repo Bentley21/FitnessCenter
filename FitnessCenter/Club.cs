@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace FitnessCenter
 
 
@@ -22,10 +24,11 @@ namespace FitnessCenter
             ClubAddress = clubAddress;
             ClubPhone = clubPhone;
         }
-
+        
         List<Club> Clubs = new List<Club>();
-        List<MultiClubMember> MultiClubMembers = new();
-        List<SingleClubMember> SingleClubMembers = new();
+        List<Member> members = new List<Member>();
+        List<MultiClubMember> multiClubMembers = new List<MultiClubMember>();
+        List<SingleClubMember> singleClubMembers = new();
 
         public Club()
         {
@@ -38,12 +41,6 @@ namespace FitnessCenter
             Club netherlands = new Club(04, "Netherlands", "932 Isle of Green, EU 31", "31-907-3596");
             Clubs.Add(netherlands);
         }
-
-        public void Run()
-        {
-
-        }
-
         public void AddMember()
         {
             string memberType;
@@ -65,7 +62,7 @@ namespace FitnessCenter
                     string memberAddress = Console.ReadLine().Trim();
                     Console.WriteLine($"What is {memberName}'s Club?");
                     string memberClub = Console.ReadLine().Trim();
-                    SingleClubMembers.Add(new SingleClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
+                    singleClubMembers.Add(new SingleClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberClub));
                 }
                 else if (memberType == "multi")
                 {
@@ -81,7 +78,7 @@ namespace FitnessCenter
                     string memberAddress = Console.ReadLine().Trim();
                     int memberPoints = 0;
 
-                    MultiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberPoints));
+                    multiClubMembers.Add(new MultiClubMember(memberId, memberName, memberPhone, memberEmail, memberAddress, memberPoints));
                 }
                 else
                 {
@@ -97,16 +94,19 @@ namespace FitnessCenter
             Console.WriteLine("What type of member are you removing? Single or Multi?");
             Console.WriteLine("What is the member # you would like to cancel?");
             memberId = int.Parse(Console.ReadLine());
-            MultiClubMembers.Remove(MultiClubMembers.Find(member => member.MemberId == memberId));
+            multiClubMembers.Remove(multiClubMembers.Find(member => member.MemberId == memberId));
             
         }
 
         public void DisplayMember()
         {
-
+            foreach(MultiClubMember multiClubMember in multiClubMembers)
+            {
+                Console.WriteLine(multiClubMember);
+            }
         }
 
-       
+
 
 
 

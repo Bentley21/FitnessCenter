@@ -19,7 +19,7 @@ namespace FitnessCenter
             MemberPoints = memberPoints;
         }
 
-        
+        List<MultiClubMember> multiClubMembers = new List<MultiClubMember>();
         public override bool CheckIn(Club club)
         {
 
@@ -34,12 +34,15 @@ namespace FitnessCenter
             return checkIn;
         }
 
-        public static int MembershipPoints(int memberPoints)
+        public int MembershipPoints(int memberPoints, int memberID, string memberName)
         {
             
             memberPoints += 25;
+            Console.WriteLine($"Member ID: {memberID} Member Name: {memberName} MemberPoints: {memberPoints}");
             return memberPoints;
         }
+
+        
     }
 
     

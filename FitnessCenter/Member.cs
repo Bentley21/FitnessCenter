@@ -72,6 +72,9 @@ namespace FitnessCenter
         {
             Console.WriteLine($"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress}");
         }
+
+        
+
     }
 
 }

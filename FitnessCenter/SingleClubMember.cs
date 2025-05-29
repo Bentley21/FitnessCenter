@@ -13,7 +13,7 @@ namespace FitnessCenter
         {
         }
 
-        
+      
 
         public override bool CheckIn(Club club)
         {
@@ -37,5 +37,6 @@ namespace FitnessCenter
             }
             return checkIn; 
         }
+
     }
 }
