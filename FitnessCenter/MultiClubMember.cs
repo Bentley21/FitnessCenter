@@ -10,28 +10,33 @@ namespace FitnessCenter
     {
 
         private int _memberPoints;
+        private List<Club> _clubs = new List<Club>();
+        private bool _checkedIn;
 
         public int MemberPoints {  get { return _memberPoints; } set { _memberPoints = value; } }
-        bool checkIn;
+        public List<Club> Clubs { get { return _clubs; } set { _clubs = value; } }
 
-        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, int memberPoints) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
+        public bool CheckedIn { get { return _checkedIn; } set { _checkedIn = value; } } 
+
+        public MultiClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, int memberPoints, Club club) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
         {
             MemberPoints = memberPoints;
+            Clubs.Add(club);
         }
 
-        List<MultiClubMember> multiClubMembers = new List<MultiClubMember>();
+        
         public override bool CheckIn(Club club)
         {
 
-            if (checkIn == true)
+            if (_checkedIn == true)
             {
                 Console.WriteLine($"{MemberName} has been checked in.");
             }
-            if (checkIn == false)
+            if (_checkedIn == false)
             {
                 Console.WriteLine($"{MemberName} has been checked out.");
             }
-            return checkIn;
+            return _checkedIn;
         }
 
         public int MembershipPoints(int memberPoints, int memberID, string memberName)
@@ -40,6 +45,19 @@ namespace FitnessCenter
             memberPoints += 25;
             Console.WriteLine($"Member ID: {memberID} Member Name: {memberName} MemberPoints: {memberPoints}");
             return memberPoints;
+        }
+
+        public override void DisplayMember()
+        {
+            Console.WriteLine("Multi Member Display");
+            base.DisplayMember();
+            Console.WriteLine(this.ToString());
+        }
+
+        public override string ToString()
+        {
+            return $"Member Points: {MemberPoints} Member Club: {Clubs} Checked In: {CheckedIn}";
+                
         }
 
         

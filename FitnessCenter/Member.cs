@@ -13,7 +13,7 @@ namespace FitnessCenter
         private string _memberPhone;
         private string _memberEmail;
         private string _memberAddress;
-        private string _memberClub;
+        //private string _memberClub;
 
         public int MemberId
         {
@@ -45,11 +45,11 @@ namespace FitnessCenter
             set { _memberAddress = value; }
         }
 
-        public string MemberClub
-        {
-            get { return _memberClub; }
-            set { _memberClub = value; }
-        }
+        //public string MemberClub
+        //{
+        //    get { return _memberClub; }
+        //    set { _memberClub = value; }
+        //}
 
         public Member(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress)
         {
@@ -68,7 +68,7 @@ namespace FitnessCenter
             return $"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress}";
         }
 
-        public void DisplayMember()
+        public virtual void DisplayMember()
         {
             Console.WriteLine($"{MemberId} {MemberName} {MemberPhone} {MemberEmail} {MemberAddress}");
         }

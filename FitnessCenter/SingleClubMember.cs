@@ -8,9 +8,15 @@ namespace FitnessCenter
 {
     public class SingleClubMember : Member
     {
+        private Club _memberClub;
         bool checkIn = false;
-        public SingleClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, string memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
+
+        public Club MemberClub {  get { return _memberClub; } set { _memberClub = value; } }
+
+
+        public SingleClubMember(int memberId, string memberName, string memberPhone, string memberEmail, string memberAddress, Club memberClub) : base(memberId, memberName, memberPhone, memberEmail, memberAddress)
         {
+            MemberClub = memberClub;
         }
 
       
